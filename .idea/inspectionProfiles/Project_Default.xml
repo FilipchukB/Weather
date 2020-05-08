@@ -1,0 +1,31 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyChainedComparisonsInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoreConstantInTheMiddle" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N801" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="new_project.ran.level_ten" />
+          <option value="pygame.transform.scale.pygame" />
+          <option value="myfirst.myfirst.settings.__FILE__" />
+          <option value="turtle.begin_fill" />
+          <option value="turtle.goto" />
+          <option value="turtle.end_fill" />
+          <option value="turtle.color" />
+          <option value="turtle.left" />
+          <option value="turtle.forward" />
+          <option value="turtle.speed" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

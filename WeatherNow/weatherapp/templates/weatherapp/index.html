@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WeatherNow</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+  <h5 class="my-0 mr-md-auto font-weight-normal">WeatherNow</h5>
+  <nav class="my-2 my-md-0 mr-md-3">
+    <a class="p-2 text-dark" href="#">Головна</a>
+    <a class="p-2 text-dark" href="#">Інформація</a>
+  </nav>
+  <a class="btn btn-outline-primary" href="#">Про сайт</a>
+</div>
+    <div class="conteiner">
+        <div class="row">
+            <div class="col-5 offset-1">
+                <h1>Погода у вашому місті</h1>
+                <form action="">
+                    <label for="city">Місто</label>
+                    <input type="text" id="city" class="form-control" name="city" placeholder="Місто">
+                    <input type="submit" name="send" value="показати" class="mt-2 btn btn-danger">
+                </form>
+            </div>
+            <div class="col-4 offset-1">
+                <h1>Інформіція про погоду</h1>
+
+                {% for info in ol_info %}
+                <div class="alert alert-info">
+                    <div class="row">
+                        <div class="col-9">
+                            <b>Місто:</b> {{info.city}}<br>
+                            <b>Температура:</b> {{info.temp}}<sup>0</sup> <br>
+                        </div>
+                        <div class="col-2 offset-1">
+                    <img src="http://openweathermap.org/img/w/{{ info.icon }}.png" alt="Погода" class="img-thumbnail">
+                </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
